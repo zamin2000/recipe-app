@@ -1,15 +1,10 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+"use client"
+
+import { Provider } from 'react-redux';
+import store from '@/store';
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from "@/components/Header";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Recipe App",
-  description: "Browse and create your favourite recipes!",
-};
 
 export default function RootLayout({
   children,
@@ -18,11 +13,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Header />
-        <main>
+        <Provider store={store}>
           {children}
-        </main>
+        </Provider>
       </body>
     </html>
   );

@@ -1,18 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import RecipeCard from "@/components/RecipeCard";
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/store';
 
 export default function Home() {
-    const [recipes, setRecipes] = useState([
-        { id: 0, name: 'Mac & Cheese', cookingTime: 60, ingredients: ["Macaroni", "Cheddar Cheese"], reviews: [5, 4, 5] },
-        { id: 1, name: 'Mashed Potato', cookingTime: 30, ingredients: ["Maris Piper Potatoes", "Butter"], reviews: [5, 3, 1] },
-    ]);
+    const recipes = useSelector((state: RootState) => state.recipes.recipes);
 
     return (
         <main className="container mt-4">
-            <div>
+            <div className="d-flex justify-content-between">
                 <h3>All Recipes</h3>
+                <Link href="/recipes/new" className="btn btn-primary">Add New Recipe</Link>
             </div>
             <div className="d-flex flex-wrap">
                 {recipes.map(recipe => (
@@ -23,8 +24,8 @@ export default function Home() {
                         ingredients={recipe.ingredients}
                         reviews={recipe.reviews}
                     />
-                ))};
+                ))}
             </div>
         </main>
     );
-};
+}

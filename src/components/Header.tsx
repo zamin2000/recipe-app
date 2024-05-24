@@ -24,17 +24,14 @@ const Header = () => {
                 <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggler">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link href={"/recipes"} className="nav-link" aria-current="page">All Recipes</Link>
+                            <Link href={"/recipes"} className="nav-link" aria-current="page">My Recipes</Link>
                         </li>
                         <li className="nav-item">
                             <Link href={"/recipes/favourites"} className="nav-link">Favourites</Link>
                         </li>
-                        <li className="nav-item">
-                            <Link href={"/recipes/new"} className="nav-link">New Recipe</Link>
-                        </li>
                     </ul>
                 </div>
-                <Link href="/signin" className="btn btn-dark disabled" type="button">Sign In</Link>
+                <Link href="/signin" className="btn btn-dark " type="button">Log In</Link>
             </div>
         </nav>
     );
