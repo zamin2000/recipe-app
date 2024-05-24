@@ -82,6 +82,12 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ￼
 ![alt text](<screenshots/Hamburger.png>)
 
+## Improvements
+- Add authentication so users can create their own private recipes, save them to their favourites, and give their ratings for every recipe.
+- Configure a database so that user-created recipes are stored permanently 
+- Create a favourites page which only displays the recipes that a user has marked as their favourites
+- Implement an option to see a recipe in more detail than what is displayed on the landing page currently
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
