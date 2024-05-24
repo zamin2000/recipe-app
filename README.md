@@ -39,6 +39,49 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 - `store/recipesSlice.ts`: contains the redux slice for managing the recipes state
 - `store/index.ts`: sets up the redux store
 
+## Screenshots
+
+### Landing page
+- Fully responsive design
+- 2 default recipes load on start up every time
+- Each recipe is displayed as a card
+- Each recipe has a name, time, list of ingredients and an average rating, as well as the total number of reviews.
+
+![alt text](<screenshots/60 minutes.png>)
+￼
+### Add New Recipe page
+- Clicking the add new recipe button takes you to a new page with a form
+- Users are able to enter the details of any custom recipe they like.
+- Multiple ingredients can be specified by simply separating each ingredient with a comma.
+
+![alt text](<screenshots/Add New Recipe.png>)
+
+### Form validation
+- Users cannot submit empty values
+![alt text](<screenshots/Form validation.png>)
+￼
+- Entering cooking time only accepts numbers
+
+![alt text](<screenshots/Pasted Graphic 5.png>)
+￼
+### Example recipe with valid data entries
+- Once the user submits the form, they are redirected to the landing page where they will find a new card displayed with their new recipe.
+
+![alt text](<screenshots/Complete Recipe.png>)
+
+![alt text](<screenshots/Mac & Cheese.png>)
+￼
+### Responsive design
+- Navbar transforms to a hamburger menu
+- Content moves
+
+![alt text](<screenshots/Responsive.png>)
+￼
+### Navbar
+- Hamburger toggle opens and closes the nav bar items
+￼
+![alt text](<screenshots/Hamburger.png>)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
