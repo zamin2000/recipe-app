@@ -8,29 +8,29 @@ const Header = () => {
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
     return (
-        <nav className="navbar navbar-expand bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="light">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="light">
             <div className="container">
                 <button
                     className="navbar-toggler"
                     type="button"
                     onClick={handleNavCollapse}
-                    aria-controls="navbarTogglerDemo03"
+                    aria-controls="navbarToggler"
                     aria-expanded={!isNavCollapsed}
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <Link href="/" className="navbar-brand">My Recipes App</Link>
-                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarTogglerDemo03">
+                <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggler">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link href={"/"} className="nav-link" aria-current="page">Recipes</Link>
+                            <Link href={"/recipes"} className="nav-link" aria-current="page">All Recipes</Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={"/new-recipe"} className="nav-link disabled">New Recipe</Link>
+                            <Link href={"/recipes/favourites"} className="nav-link">Favourites</Link>
                         </li>
                         <li className="nav-item">
-                            <Link href={"/favourites"} className="nav-link disabled">Favourites</Link>
+                            <Link href={"/recipes/new"} className="nav-link">New Recipe</Link>
                         </li>
                     </ul>
                 </div>
