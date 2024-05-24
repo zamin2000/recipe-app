@@ -1,3 +1,5 @@
+# Next.js Recipe App with Redux
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -18,7 +20,24 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
+
+- View a list of recipes
+- Add your own custom recipes
+- Uses Redux for state management
+- Styled with Bootstrap
+
+## Project Structure
+
+- `app/`: Contains the main application files and pages
+- `components/`: Contains reusable UI components like RecipeCard and NewRecipeForm
+- `store/`: Contains Redux store configuration and slices
+
+## Redux
+
+- This app uses Redux for state management
+- `store/recipesSlice.ts`: contains the redux slice for managing the recipes state
+- `store/index.ts`: sets up the redux store
 
 ## Learn More
 
